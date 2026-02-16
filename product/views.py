@@ -77,7 +77,7 @@ class ProductImageViewSet(ModelViewSet):
         return ImageModel.objects.filter(product_id=self.kwargs.get('product_pk'))
     
     def perform_create(self, serializer):
-        serializer.save(product_id=self.kwargs.get['product_pk'])
+        serializer.save(product_id=self.kwargs.get('product_pk'))
 # class ViewProduct(APIView):
 #     def get(self,request):
 #         product=Product.objects.select_related('category').all()
